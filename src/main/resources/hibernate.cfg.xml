@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/testhibernate?useSSL=false</property>
+    <property name="connection.driver_class"/>
+    <property name="connection.username">root</property>
+    <property name="connection.password">123456</property>
+
+    <!-- Для того что бы запросы проходили по кириллице-->
+        <property name="hibernate.connection.characterEncoding">utf8</property>
+<!-- Показываются все sql-запросы -->
+    <property name="show_sql"> true</property>
+    <!-- Если не ставить этот параметр то запросы будут выводиться в строку-->
+    <property name="hibernate.format_sql"> true</property>
+    <!-- Лучше указывать -->
+    <property name="default_schema">testhibernate</property>
+
+    <!-- К какому контексту будет привязана сессия hibernate
+    thread завершается и сессия завершает соединение
+    ___ Кто будет управлять сессией, к чему привязана сессия.
+    Каждый поток должен создавать свою сессию___
+    -->
+    <property name="hibernate.current_session_context_class">thread</property>
+
+        <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
