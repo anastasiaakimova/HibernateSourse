@@ -1,0 +1,8 @@
+by/akimova/trainig/hibernate/entity/Author.java
+ by.akimova.trainig.hibernate.entity.Author
+by/akimova/trainig/hibernate/entity/Book.java
+ by.akimova.trainig.hibernate.entity.Book
+by/akimova/trainig/hibernate/Start.java
+ by.akimova.trainig.hibernate.Start
+by/akimova/trainig/hibernate/HibernateUtil.java
+ by.akimova.trainig.hibernate.HibernateUtil
