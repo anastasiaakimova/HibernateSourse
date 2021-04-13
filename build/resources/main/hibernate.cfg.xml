@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:mysql://localhost:3306/testhibernate?useSSL=false</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/testhibernate?useSSL=false&amp;serverTimezone=UTC</property>
     <property name="connection.driver_class"/>
     <property name="connection.username">root</property>
     <property name="connection.password">123456</property>
@@ -25,7 +25,8 @@
     -->
     <property name="hibernate.current_session_context_class">thread</property>
 
-        <!-- DB schema will be updated if needed -->
-    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    <!-- указывает в каких именно классах хиберу нужно искать аннотации для того что бы произвести мэпинг -->
+    <mapping class=" by.akimova.trainig.hibernate.entity.Author"/>
+    <mapping class=" by.akimova.trainig.hibernate.entity.Book"/>
   </session-factory>
 </hibernate-configuration>
